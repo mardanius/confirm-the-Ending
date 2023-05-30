@@ -1,9 +1,22 @@
   
-var userString = prompt("Input the string");
+/*var userString = prompt("Input the string");
 var userTarget = prompt("Input the target");
+*/
 
+//caputuring the user input
+
+
+/*
 document.getElementById("userInputString").innerHTML = `The word is: ${userString}`;
 document.getElementById("userInputTarget").innerHTML = `The target is: ${userTarget}`;
+*/
+
+function runConfirmEnding(){
+  var userString = document.getElementById("userString").value;
+  var userTarget = document.getElementById("userTarget").value;
+  
+  confirmEnding(userString, userTarget);
+}
 
 function confirmEnding(str, target) {
     var targetLength = target.length;
@@ -13,9 +26,9 @@ function confirmEnding(str, target) {
     var compar = str.substring(sub)
   
     if (target == compar){
-      return console.log(true);
+      document.getElementById("result").innerHTML = `The result is: ${true}`;
     } else {
-      return console.log(false);
+      document.getElementById("result").innerHTML = `The result is: ${false}`;
     }
     //return str;
   }
